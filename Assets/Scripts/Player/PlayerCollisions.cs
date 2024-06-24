@@ -2,23 +2,16 @@
 
 public class PlayerCollisions : MonoBehaviour
 {
-    private Animator playerAnim;
-
-    private void Awake()
-    {
-        playerAnim = GetComponent<Animator>();
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Size")
         {
-            GameEvents.instance.playerSize.Value += 5;
+            GameEvents.instance.playerSize.Value += 15;
             other.GetComponent<Collider>().enabled = false;
             Destroy(other.gameObject);
         }
         if (other.tag == "Obstacle")
         {
-            playerAnim.SetTrigger("kick");
             other.GetComponent<Block>().CheckHit();
             Destroy(other.gameObject);
         }
