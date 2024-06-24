@@ -192,7 +192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0435\u0447\u0435\u0440\u0438\u043D\u043A\u0430"
+  m_text: "\u0428\u043A\u043E\u043B\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -276,8 +276,8 @@ GameObject:
   - component: {fileID: 5961195695942713743}
   - component: {fileID: 5961195695942713740}
   m_Layer: 0
-  m_Name: Gate
-  m_TagString: Gate
+  m_Name: Gate 1
+  m_TagString: gate1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8a8d0466e2615384f8806714d60e1aaa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 01763a1c279a5cd4d8f897f6b6cdbae5, type: 2}
+      objectReference: {fileID: 2100000, guid: 9ca80467a033e954a8b9ad8601d6f4c7, type: 2}
     - target: {fileID: 919132149155446097, guid: 8a8d0466e2615384f8806714d60e1aaa, type: 3}
       propertyPath: m_Name
       value: Gate

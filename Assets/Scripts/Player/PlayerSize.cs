@@ -8,10 +8,12 @@ public class PlayerSize : MonoBehaviour
 {
     private CompositeDisposable subscriptions = new CompositeDisposable();
     [SerializeField] private Slider playerSizeSlider;
-    [SerializeField] private Text statusText; 
+    [SerializeField] private Text statusText;
+    [SerializeField] private Text countValue;
     [SerializeField] private Color poorColor = new Color(1, 0.6f, 0); 
     [SerializeField] private Color wealthyColor = new Color(1, 1, 0); 
     [SerializeField] private Color richColor = new Color(0, 1, 0);
+    [SerializeField] private Transform playerTransform;
 
     private void OnEnable()
     {
@@ -27,6 +29,7 @@ public class PlayerSize : MonoBehaviour
             {
                 var sliderValue = (value - 1) / 99f;
                 playerSizeSlider.value = sliderValue;
+                countValue.text = "Уровень 1\nМонет: " + value.ToString();
 
                 if (sliderValue <= 0.25f)
                 {

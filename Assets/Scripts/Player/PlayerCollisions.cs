@@ -16,7 +16,9 @@ public class PlayerCollisions : MonoBehaviour
             Destroy(other.gameObject);
         }
         if (other.tag == "Gate")
-            other.GetComponent<Gate>().ExecuteOperation();
+            GameEvents.instance.playerSize.Value -= 25;
+        if (other.tag == "gate1")
+            GameEvents.instance.playerSize.Value += 25;
         if (other.tag == "Finish")
         {
             GameEvents.instance.gameWon.SetValueAndForceNotify(true);
