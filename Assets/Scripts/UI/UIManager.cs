@@ -11,16 +11,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject winUI;
     [SerializeField] private GameObject loseUI;
-    [SerializeField] private GameObject settingsUI;
-    private bool settingsOpen = false;
 
     private void OnEnable()
     {
         StartCoroutine(Subscribe());
         gameUI.SetActive(true);
         startUI.SetActive(true);
-        if (settingsUI.GetComponent<Canvas>().enabled)
-            settingsUI.SetActive(false);
     }
 
     private IEnumerator Subscribe()
@@ -62,25 +58,8 @@ public class UIManager : MonoBehaviour
         startUI.SetActive(false);
         winUI.SetActive(false);
         loseUI.SetActive(false);
-        //settingsUI.SetActive(false);
 
         _menu.SetActive(true);
-    }
-
-    public void SettingsMenu()
-    {
-        if (settingsOpen)
-        { 
-            Time.timeScale = 1f;
-            settingsUI.SetActive(false);
-            settingsOpen = false;
-        }
-        else
-        {
-            Time.timeScale = 0f;
-            settingsUI.SetActive(true);
-            settingsOpen = true;
-        }
     }
 
     public void QuitGame()
